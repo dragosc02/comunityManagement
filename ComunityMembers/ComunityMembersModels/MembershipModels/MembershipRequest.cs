@@ -29,5 +29,7 @@ namespace CommunityModels.MembershipModels
 
         /// <summary>Gets or sets the id of the user that created the record.</summary>
         public int UserCreated { get; set; }
+
+
     }
 }
