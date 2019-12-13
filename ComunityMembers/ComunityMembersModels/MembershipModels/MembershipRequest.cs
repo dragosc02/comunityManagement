@@ -57,8 +57,8 @@ namespace CommunityModels.MembershipModels
         /// <summary>Gets or sets the last name.</summary>
         public string LastName { get; set; }
 
-        /// <summary>Gets or sets mentions for chuch testimony.</summary>
-        public string MentionsForChurchTestimony { get; set; }
+        /// <summary>Gets or sets mentions for church confession of faith.</summary>
+        public string MentionsForChurchConfessionOfFaith { get; set; }
 
         /// <summary>Gets or sets the phone numbers.</summary>
         public string PhoneNumbers { get; set; }
