@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityMembers", "ComunityMembers\CommunityMembers.csproj", "{8D504CF7-A7AD-46B2-800F-80C6B002676A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityMembers", "ComunityMembers\CommunityMembers.csproj", "{8D504CF7-A7AD-46B2-800F-80C6B002676A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityModels", "ComunityMembersModels\CommunityModels.csproj", "{358F8ACC-DC87-475C-8DBD-46F78D9D491B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunityModels", "ComunityMembersModels\CommunityModels.csproj", "{358F8ACC-DC87-475C-8DBD-46F78D9D491B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunityRepository", "RepositoryTemplate\CommunityRepository.csproj", "{6AC80283-EBC1-4560-B45F-47CFB1B10F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCommunityMembers", "TestCommunityMembers\TestCommunityMembers.csproj", "{417A48DF-C162-487D-AB9D-A0816032AE53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{358F8ACC-DC87-475C-8DBD-46F78D9D491B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{358F8ACC-DC87-475C-8DBD-46F78D9D491B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{358F8ACC-DC87-475C-8DBD-46F78D9D491B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC80283-EBC1-4560-B45F-47CFB1B10F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC80283-EBC1-4560-B45F-47CFB1B10F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC80283-EBC1-4560-B45F-47CFB1B10F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC80283-EBC1-4560-B45F-47CFB1B10F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417A48DF-C162-487D-AB9D-A0816032AE53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417A48DF-C162-487D-AB9D-A0816032AE53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417A48DF-C162-487D-AB9D-A0816032AE53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417A48DF-C162-487D-AB9D-A0816032AE53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
