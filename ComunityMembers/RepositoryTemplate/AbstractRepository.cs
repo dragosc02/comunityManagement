@@ -7,40 +7,65 @@ using System.Threading.Tasks;
 
 namespace CommunityRepository
 {
+    /// <summary>
+    /// Abstract class which have the CRUD operations and is the base class for repositories.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class AbstractRepository<T> where T : IModel
     {
-        public FullDbContext _dataContext { get; set; }
+        /// <summary>
+        /// Variable of FullDbContext type which helps to communicate with database.
+        /// </summary>
+        protected FullDbContext _dataContext { get; set; }
 
+        /// <summary>
+        /// Constructor. It is necessary a parameter: DbContext type.
+        /// </summary>
+        /// <param name="fullContext"></param>
         public AbstractRepository(FullDbContext fullContext)
         {
             _dataContext = fullContext;
         }
-        public void Delete(int Id)
+
+        /// <summary>
+        /// This method deletes asynchronously an item based on the given id.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns>Nothing.</returns>
+        public async Task DeleteAsync(int Id)
         {
-            Task<T> item = GetAsync(Id);
-            if(item.Result != null)
+            T item = await GetAsync(Id);
+            if(item != null)
             {
-                DeleteAsync(item.Result);
+                await DeleteAsync(item);
             }
         }
 
-        public int Count()
+        /// <summary>
+        /// This method gets the total number of records from a table.
+        /// </summary>
+        /// <returns>It returns total number of record from a table.</returns>
+        public async Task<int> CountAsync()
         {
-            Task<IList<T>> allItems = GetAllAsync();
-            return allItems.Result.Count;
+            IList<T> allItems = await GetAllAsync();
+            return allItems.Count;
         }
 
-        public async Task<T> Save(T item, int loggedUserId)
+        /// <summary>
+        /// This method saves (insert/update) asynchronously an item and the user number which called this method.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="loggedUserId"></param>
+        /// <returns>It returns the item which was saved.</returns>
+        public async Task<T> SaveAsync(T item, int loggedUserId)
         {
             T result;
             if(item.Id > 0)
             {
-                // update
                 result = await UpdateAsync(item);
             }
             else
             {
-                // insert
                 item.CreationDate = DateTime.Now;
                 item.UserCreated = loggedUserId;
                 result = await InsertAsync(item);
