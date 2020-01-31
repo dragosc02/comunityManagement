@@ -41,7 +41,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Membership based on the given id.</returns>
-        protected override async Task<Membership> GetAsync(int id)
+        public override async Task<Membership> GetAsync(int id)
         {
             Membership membership = await _dataContext.Memberships.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
             return membership;
@@ -51,7 +51,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Memberships from database.
         /// </summary>
         /// <returns>It returns a list with all Memberships from database.</returns>
-        protected override async Task<IList<Membership>> GetAllAsync()
+        public override async Task<IList<Membership>> GetAllAsync()
         {
             return await _dataContext.Memberships.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }

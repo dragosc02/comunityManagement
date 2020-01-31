@@ -47,7 +47,7 @@ namespace TestCommunityMembers
                 PlaceOfBaptism = "Dorohoi",
                 SpouseName = "Apascaritei Irina"
             };
-            Member mem = await memberRepository.Save(member, 1);
+            Member mem = await memberRepository.SaveAsync(member, 1);
 
         }
     }

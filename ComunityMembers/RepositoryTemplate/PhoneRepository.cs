@@ -37,7 +37,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Phone Numbers from database.
         /// </summary>
         /// <returns>It returns a list with all Phone Numbers from database.</returns>
-        protected override async Task<IList<Phone>> GetAllAsync()
+        public override async Task<IList<Phone>> GetAllAsync()
         {
             return await _dataContext.PhoneNumbers.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }
@@ -47,7 +47,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Phone Number based on the given id.</returns>
-        protected override async Task<Phone> GetAsync(int id)
+        public override async Task<Phone> GetAsync(int id)
         {
             return await _dataContext.PhoneNumbers.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
         }
