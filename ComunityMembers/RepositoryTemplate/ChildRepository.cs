@@ -37,7 +37,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Children from database.
         /// </summary>
         /// <returns>It returns a list with all Children from database.</returns>
-        protected override async Task<IList<Child>> GetAllAsync()
+        public override async Task<IList<Child>> GetAllAsync()
         {
             return await _dataContext.Children.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }
@@ -47,7 +47,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Member based on the given id.</returns>
-        protected override async Task<Child> GetAsync(int id)
+        public override async Task<Child> GetAsync(int id)
         {
             return await _dataContext.Children.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
         }
