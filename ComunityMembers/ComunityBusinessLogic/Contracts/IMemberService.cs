@@ -8,8 +8,8 @@ namespace CommunityBusinessLogic.Contracts
 {
     public interface IMemberService : ICrudOperationsService<Member>
     {
-        Task SaveChildAsync(Child childToSave, int loggedUserId);
+        Task SaveChildAsync(Member member, Child childToSave, int loggedUserId);
 
-        Task SaveChildrenAsync(IList<Child> childrenToSave, int loggedUserId);
+        Task SaveChildrenAsync(Member member, IList<Child> childrenToSave, int loggedUserId);
     }
 }
