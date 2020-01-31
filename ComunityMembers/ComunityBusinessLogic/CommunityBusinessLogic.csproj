@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ComunityMembersModels\CommunityModels.csproj" />
+    <ProjectReference Include="..\RepositoryTemplate\CommunityRepository.csproj" />
+  </ItemGroup>
+
+</Project>

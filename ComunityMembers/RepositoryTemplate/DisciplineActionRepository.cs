@@ -37,7 +37,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Discipline Actions from database.
         /// </summary>
         /// <returns>It returns a list with all Discipline Actions from database.</returns>
-        protected override async Task<IList<DisciplineAction>> GetAllAsync()
+        public override async Task<IList<DisciplineAction>> GetAllAsync()
         {
             return await _dataContext.DisciplineActions.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }
@@ -47,7 +47,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Discipline Action based on the given id.</returns>
-        protected override async Task<DisciplineAction> GetAsync(int id)
+        public override async Task<DisciplineAction> GetAsync(int id)
         {
             return await _dataContext.DisciplineActions.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
         }

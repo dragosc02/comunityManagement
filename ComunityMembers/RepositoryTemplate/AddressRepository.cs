@@ -37,7 +37,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Address based on the given id.</returns>
-        protected override async Task<Address> GetAsync(int id)
+        public override async Task<Address> GetAsync(int id)
         {
             Address address = await _dataContext.Addresses.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
             return  address;
@@ -47,7 +47,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Addresses from database.
         /// </summary>
         /// <returns>It returns a list with all Addresses from database.</returns>
-        protected override async Task<IList<Address>> GetAllAsync()
+        public override async Task<IList<Address>> GetAllAsync()
         {
             return await _dataContext.Addresses.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }

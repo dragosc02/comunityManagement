@@ -37,7 +37,7 @@ namespace CommunityRepository
         /// This method gets asynchronously the list with Emails from database.
         /// </summary>
         /// <returns>It returns a list with all Emails from database.</returns>
-        protected override async Task<IList<Email>> GetAllAsync()
+        public override async Task<IList<Email>> GetAllAsync()
         {
             return await _dataContext.EmailAddresses.AsNoTracking().ToListAsync().ConfigureAwait(false);
         }
@@ -47,7 +47,7 @@ namespace CommunityRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns>It returns the Email based on the given id.</returns>
-        protected override async Task<Email> GetAsync(int id)
+        public override async Task<Email> GetAsync(int id)
         {
             return await _dataContext.EmailAddresses.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(false);
         }
