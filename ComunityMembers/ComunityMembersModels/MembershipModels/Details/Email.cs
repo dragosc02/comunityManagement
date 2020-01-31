@@ -26,7 +26,7 @@ namespace CommunityModels.MembershipModels.Details
         public bool IsMain { get; set; }
 
         /// <summary>The principal, parent entity. The <see cref="Member"/> who has this specific email.</summary>
-        public Member Member { get; set; }
+        public virtual Member Member { get; set; }
 
         /// <summary>The foreign key to the <see cref="Member"/> entity.</summary>
         public int MemberId { get; set; }
