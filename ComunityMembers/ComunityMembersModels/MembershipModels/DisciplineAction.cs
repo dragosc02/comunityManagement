@@ -17,7 +17,7 @@ namespace CommunityModels.MembershipModels
         public int Id { get; set; }
 
         /// <summary>The principal, parent entity. The <see cref="Membership"/> who has this specific address.</summary>
-        public Membership Membership { get; set; }
+        public virtual Membership Membership { get; set; }
 
         /// <summary>The foreign key to the <see cref="Membership"/> entity.</summary>
         public int MembershipId { get; set; }

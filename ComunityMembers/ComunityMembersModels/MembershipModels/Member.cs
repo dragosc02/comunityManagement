@@ -11,13 +11,13 @@ namespace CommunityModels.MembershipModels
     public class Member : IModel
     {
         /// <summary>Gets or sets the addresses list.</summary>
-        public List<Address> Addresses { get; set; }
+        public virtual List<Address> Addresses { get; set; }
 
         /// <summary>Gets or sets the birth day.</summary>
         public DateTime BirthDay { get; set; }
 
         /// <summary>Gets or sets the list of children.</summary>
-        public List<Child> Children { get; set; }
+        public virtual List<Child> Children { get; set; }
 
         /// <summary>Gets or sets the date when the record was created.</summary>
         public DateTime CreationDate { get; set; }
@@ -38,13 +38,13 @@ namespace CommunityModels.MembershipModels
         public DateTime LastUpdated { get; set; }
 
         /// <summary>Gets or sets the memberships list.</summary>
-        public List<Membership> Memberships { get; set; }
+        public virtual List<Membership> Memberships { get; set; }
 
         /// <summary>Gets or sets observation.</summary>
         public string Observation { get; set; }
 
         /// <summary>Gets or sets the list of phone numbers.</summary>
-        public List<Phone> PhoneNumbers { get; set; }
+        public virtual List<Phone> PhoneNumbers { get; set; }
 
         /// <summary>Gets or sets the place of baptism.</summary>
         public string PlaceOfBaptism { get; set; }

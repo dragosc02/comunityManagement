@@ -14,7 +14,7 @@ namespace CommunityModels.MembershipModels
         public DateTime CreationDate { get; set; }
 
         /// <summary>Gets or sets the discipline action list.</summary>
-        public List<DisciplineAction> DisciplineActions { get; set; }
+        public virtual List<DisciplineAction> DisciplineActions { get; set; }
 
         /// <summary>Gets or sets the date when the membership ended.</summary>
         public DateTime? EndMembership { get; set; }
@@ -29,7 +29,7 @@ namespace CommunityModels.MembershipModels
         public int MemberId { get; set; }
 
         /// <summary>Gets or sets the membership request information.</summary>
-        public MembershipRequest MembershipRequest { get; set; }
+        public virtual MembershipRequest MembershipRequest { get; set; }
 
         /// <summary>Gets or sets the membership status.</summary>
         public MembershipStatus MembershipStatus { get; set; }
